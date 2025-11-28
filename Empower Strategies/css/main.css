@@ -1,0 +1,393 @@
+:root {
+  --lime-cream: #BCE784;
+  --vintage-grape:#554971;
+  --frosted-blue: #B8F3FF;
+  --emerald-dark: #26C980;
+  --emerald-light: #5DD39E;
+  --dim-grey: #5D6364;
+}
+
+/* General body styling */
+html, body {
+  height: 100%;
+}
+body {
+  padding-top: 80px; /* matches navbar height */
+  font-family: 'Inter', sans-serif;
+  color: var(--vintage-grape);
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* pushes footer down */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--vintage-grape);
+  border-bottom: 6px solid var(--emerald-light);
+}
+.navbar-brand img {
+  height: 70px;
+}
+.navbar .navbar-brand {
+  color: var(--emerald-dark);
+  font-weight: 700;
+}
+.navbar .navbar-brand:hover {
+  color: #B8F3FF;
+}
+.navbar .nav-link {
+  color: var(--emerald-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #B8F3FF!important;
+  font-weight: 700;
+}
+
+/* Hero section (generic bold hero) */
+.bold {
+  margin-top: 20px;
+  background: linear-gradient(rgba(85,73,113,0.7), rgba(85,73,113,0.7)), 
+              url('../img/bold.jpg') center/cover no-repeat;
+  color: var(--lime-cream);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+.bold h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Lora', serif;
+}
+.bold p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.bold .btn {
+  background-color: var(--emerald-light);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+.bold .btn:hover {
+  background-color: var(--vintage-grape);
+  color: var(--lime-cream);
+}
+
+/* Main content blocks */
+.main-content {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 4rem;
+}
+.main-content h2,
+.main-content h3 {
+  color: var(--vintage-grape);
+  font-family: 'Lora', serif;
+}
+.main-content p {
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: var(--dim-grey);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--emerald-light);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--vintage-grape);
+  color: var(--lime-cream);
+}
+
+/* About page */
+.about-page {
+  background-color: var(--vintage-grape);
+}
+.about-block h2 {
+  color: var(--emerald-dark);
+  border-bottom: 3px solid var(--frosted-blue);
+  font-family: 'Lora', serif;
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.about-block p {
+  color: #fff;
+  font-size: 1.18rem;
+}
+
+/* Services page */
+.services-page {
+  background-color: var(--vintage-grape);
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.services-hero {
+  background: linear-gradient(rgba(85,73,113,0.8), rgba(85,73,113,0.8)), 
+              url('../img/service4.jpg') center/cover no-repeat;
+  padding: 12rem 4rem;
+  text-align: center;
+  color: #fff;
+}
+.services-hero h1 {
+  font-family: 'Lora', serif;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--lime-cream);
+}
+.services-hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+.services-grid .row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  gap: 1rem; /* adds space between cards */
+}
+.services-grid .col-md-4 {
+  flex: 1;
+  padding: 0;
+}
+.service-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.service-box img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.service-box h3 {
+  font-family: 'Lora', serif;
+  color: var(--emerald-dark);
+  margin-bottom: 1rem;
+}
+.service-box p {
+  color: var(--dim-grey);
+}
+
+/* Testimonials page */
+.testimonials-page {
+  background-color:var(--vintage-grape); /* purple */
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.testimonials-page h1 {
+  font-family: 'Lora', serif;
+  color: var(--emerald-dark);
+  border-bottom: 3px solid var(--emerald-light);
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.testimonial-intro {
+  color: #fff; /* white text */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Cards */
+.card {
+  background-color:#fff;
+  border: 5px solid var(--frosted-blue);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-title {
+  color:var(--lime-cream);
+}
+
+
+/* FAQ section */
+.faq {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 3rem;
+  margin-top: 3rem;
+}
+.faq h2 {
+  color: var(--emerald-dark);
+  border-bottom: 3px solid var(--lime-cream);
+  font-family: 'Lora', serif;
+  margin-bottom: 2rem;
+}
+.accordion-button {
+  background-color: var(--emerald-dark);
+  color: #fff;
+  font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--emerald-light);
+  color: #fff;
+}
+
+/* Blog heading + intro styling */
+
+.blog-page {
+  background-color: var(--vintage-grape); /* pick any brand color */
+  padding: 4rem 2rem;
+  border-radius: 12px;
+}
+
+/* Keep blog cards white */
+.blog-page .card {
+  background-color: #fff;
+}
+
+.blog-intro h1 {
+  color: var(--emerald-dark);   /* heading color */
+  font-family: 'Lora', serif;
+  border-bottom: 3px solid var(--emerald-dark);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.blog-intro p {
+  color: #fff; /* intro sentence color */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+
+.blog-page .card-title {
+  color: var(--vintage-grape); /* or emerald-dark, lime-cream, etc. */
+  font-family: 'Lora', serif;
+}
+
+.blog-page .card-text {
+  color: var(--dim-grey);   /* or any brand color you prefer */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.blog-page .card {
+  border: 5px solid var(--frosted-blue); /* or any brand color */
+}
+
+
+/* Uniform blog card images */
+.card-img-top {
+  height: 260px;       /* adjust to the size you want */
+  object-fit: cover;   /* crops without distortion */
+  width: 100%;         /* ensures full card width */
+  border-radius: 8px;  /* keeps rounded corners consistent */
+}
+
+
+/* Make blog cards equal height only within the blog grid */
+.blog .card.h-100 {
+  height: 100%;
+}
+
+/* Keep body balanced and button anchored */
+.blog .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+.blog .btn-primary {
+  align-self: flex-start;
+}
+
+/* Nice hover polish */
+.blog .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 8px;
+  border: 2px solid var(--frosted-blue);
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--emerald-light);
+  outline: none;
+  box-shadow: 0 0 6px rgba(93, 211, 158, 0.4);
+}
+
+.contact-img {
+  max-width: 40px;   /* makes the image smaller */
+  margin-top: -40px;  /* moves it upward */
+  margin-bottom: 1rem; /* keeps space before the text */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-page {
+  background: linear-gradient(rgba(85,73,113,0.85), rgba(85,73,113,0.85)),
+              url('../img/contact-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--vintage-grape);
+  color: var(--frosted-blue);
+  text-align: center;
+  padding: 1rem;
+}
+footer a {
+  color: var(--frosted-blue);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
